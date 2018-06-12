@@ -1,0 +1,43 @@
+version: '2'
+services:
+  taxi-service-app:
+    build: ./spring-boot-2-taxi-service/target
+    networks:
+     - backend
+    depends_on:
+     - db
+
+  taxi-booking-service-app:
+    build: ./spring-boot-2-taxi-booking-service/target
+    networks:
+     - backend
+    depends_on:
+     - db
+
+  db:
+    hostname: redis
+    image: "redis:alpine"
+    ports:
+     - "6379:6379"
+    networks:
+     - backend
+
+  nginx-lb:
+    container_name: nginx-lb
+    image: nginx:1.13
+    restart: always
+    ports:
+     - 80:80
+     - 443:443
+    volumes:
+     - ./nginx/conf.d:/etc/nginx/conf.d
+    networks:
+     - backend
+    depends_on:
+     - taxi-service-app
+     - taxi-booking-service-app
+
+
+networks:
+  backend:
+    driver: bridge
