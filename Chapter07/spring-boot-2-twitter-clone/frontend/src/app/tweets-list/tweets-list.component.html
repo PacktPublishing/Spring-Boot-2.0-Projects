@@ -1,0 +1,13 @@
+<mat-card>
+  <mat-card-header>Tweets</mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let tweet of tweets">
+        <a mat-list-avatar href="/profile/{{tweet.tweetUser.screenName}}"><img mat-list-avatar src="{{tweet.tweetUser.profileImage}}" alt="{{tweet.tweetUser.profileImage}}"/></a>
+        <h3 mat-line>{{tweet.content}}</h3>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+
+  <button mat-fab color="primary" [routerLink]="['/tweets-add']">Tweet</button>
+</mat-card>

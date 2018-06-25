@@ -1,0 +1,9 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <a href="/"><span>{{title}}</span></a>
+    <span style="flex: 1 1 auto;"></span>
+    <span><a (click)="logout()" href="#">Logout</a></span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

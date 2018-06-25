@@ -1,0 +1,19 @@
+<mat-card>
+  <form #tweetsForm="ngForm" (ngSubmit)="save(tweetsForm.value)">
+    <mat-card-header>
+      <mat-card-title><h2>Add Tweet</h2></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field>
+        <textarea matInput placeholder="Tweet" [(ngModel)]="tweet.content" required name="content" #content cols="50" rows="10"></textarea>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit"
+              [disabled]="!tweetsForm.form.valid">Save</button>
+      <a mat-button routerLink="/tweets-list">Cancel</a>
+    </mat-card-actions>
+    <mat-card-footer>
+    </mat-card-footer>
+  </form>
+</mat-card>

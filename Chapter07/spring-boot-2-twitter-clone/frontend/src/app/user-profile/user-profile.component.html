@@ -1,0 +1,11 @@
+<mat-list>
+  <h2>{{user.screenName}}</h2>
+  <mat-divider></mat-divider>
+  <img mat-list-avatar src="{{user.profileImage}}" alt="{{user.profileImage}}" width="200" height="200"/>
+  <mat-divider></mat-divider>
+  {{user.bio}}
+  <mat-divider></mat-divider>
+  <form #followForm="ngForm" (ngSubmit)="follow(user.userId)">
+    <button mat-raised-button color="primary" type="submit">Follow</button>
+  </form>
+</mat-list>
