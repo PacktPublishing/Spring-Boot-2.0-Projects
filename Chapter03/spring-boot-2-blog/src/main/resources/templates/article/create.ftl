@@ -30,8 +30,8 @@
     <input type="text" class="form-control" id="title" name="title" placeholder="Post Title" required="true">
   </div>
   <div class="form-group">
-    <label for="postLink">Perma Link</label>
-    <input type="text" class="form-control" id="link" name="link" placeholder="Post Perma Link" required="true">
+    <label for="postLink">Permalink</label>
+    <input type="text" class="form-control" id="link" name="link" placeholder="Post Permalink" required="true">
   </div>
   <div class="form-group">
     <label for="postSummary">Summary</label>
