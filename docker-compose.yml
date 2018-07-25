@@ -1,0 +1,21 @@
+version: '3'
+
+networks:
+  backend:
+
+services:
+  app:
+    image: maven:alpine
+    ports: 
+      - 8080:8080
+    working_dir: /app
+    command: bash -c "mvn package && java -jar target/spring-boot-2-blog-0.0.1-SNAPSHOT.jar"
+    volumes: 
+      - .m2:/root/.m2
+      - ./Chapter03/spring-boot-2-blog:/app
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch-oss:6.3.0
+    environment:
+      - cluster.name=docker-cluster
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
