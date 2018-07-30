@@ -47,7 +47,7 @@ With the following software and hardware list you can run all code files present
 | Chapter  | Software required                   | OS required                        |
 | -------- | ------------------------------------| -----------------------------------|
 | All       | Java 8 Development Kit              | Windows |
-| All        | IDEA IntelliJ           | Windows |
+| All        | IntelliJ IDEA         | Windows |
 | All      |  Maven           | Windows|
 
 
