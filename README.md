@@ -1,22 +1,22 @@
-# Book Name
+# Spring Boot 2.0 Projects
 
-<a href="Packt UTM URL of the Book"><img src="Cover Image URL of the Book" alt="Book Name" height="256px" align="right"></a>
+<a href="https://www.packtpub.com/application-development/spring-boot-20-projects?utm_source=github&utm_medium=repository&utm_campaign=9781789136159"><img src="https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B10531_MockupCovernew.png" alt="Spring Boot 2.0 Projects" height="256px" align="right"></a>
 
-This is the code repository for [Book Name](Packt UTM URL of the Book), published by Packt.
+This is the code repository for [Spring Boot 2.0 Projects](https://www.packtpub.com/application-development/spring-boot-20-projects?utm_source=github&utm_medium=repository&utm_campaign=9781789136159), published by Packt.
 
-**Subtitle from EPIC**
+**Build production-grade reactive applications and microservices with Spring Boot**
 
 ## What is this book about?
-First Paragraph from the Long Description
+Spring is one of the best tools available on the market for developing web, enterprise, and cloud-ready software. The goal of Spring Boot is to provide a set of tools for quickly building Spring applications that are easy to configure, and that make it easy to create and run production-grade Spring-based applications. Spring Boot 2.0 Projects will get you acquainted with important features of the latest version of this application-building tool and will cover basic, as well as advanced topics.
 
-This book covers the following exciting features: <First 5 What you'll learn points>
-* Learn how to manage users, groups, and permissions
-* Encrypt and decrypt disks with Linux Unified Key Setup /Luks
-* Setup SSH for remote access, and connect it to other nodes
-* Understand how to add, remove, and search for packages
-* Use NFS and Samba to share directories with other users
+This book covers the following exciting features: 
+* Learn the fundamental features of Spring Boot 2.0 and Kotlin
+* Customize Spring Boot 2.0 applications
+* Build a basic web application
+* Use Redis to build a taxi-hailing API
+* Create a simple blog management system and a Twitter clone
 
-If you feel this book is for you, get your [copy](https://www.amazon.com/dp/10DigitISBN) today!
+If you feel this book is for you, get your [copy](https://www.amazon.com/dp/1789136156) today!
 
 <a href="https://www.packtpub.com/?utm_source=github&utm_medium=banner&utm_campaign=GitHubBanner"><img src="https://raw.githubusercontent.com/PacktPublishing/GitHub/master/GitHub.png" 
 alt="https://www.packtpub.com/" border="5" /></a>
@@ -27,56 +27,41 @@ All of the code is organized into folders. For example, Chapter02.
 
 The code will look like the following:
 ```
-if (test expression)
-{
-  Statement upon condition is true
+public class Address {
+  private String number;
+  private String street;
+  private String city;
+  private String country;
+  private String zipCode;
+  // Getters, Setters, Equals, Hashcode
 }
 ```
 
 **Following is what you need for this book:**
-Copy and paste the Audience section from the EPIC.
+This book is for competent Spring developers who wish to understand how to develop complex yet scalable applications with Spring Boot. You must have a good knowledge of Java programming and be familiar with the basics of Spring.
 
-With the following software and hardware list you can run all code files present in the book (Chapter 1-15).
+With the following software and hardware list you can run all code files present in the book (Chapter 1-9).
 
 ### Software and Hardware List
 
 | Chapter  | Software required                   | OS required                        |
 | -------- | ------------------------------------| -----------------------------------|
-| 1        | R version 3.3.0                     | Windows, Mac OS X, and Linux (Any) |
-| 2        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 3        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 4        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 5        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 6        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 7        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 8        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 9        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 10        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 11        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 12        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 13        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 14        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
-| 15        | Rstudio Desktop 0.99.903            | Windows, Mac OS X, and Linux (Any) |
+| All       | Java 8 Development Kit              | Windows |
+| All        | IDEA IntelliJ           | Windows |
+| All      |  Maven           | Windows|
 
 
-We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](Graphics Bundle Link).
+
 
 ### Related products <Paste books from the Other books you may enjoy section>
-* Linux: Powerful Server Administration [[Packt]](https://www.packtpub.com/networking-and-servers/linux-powerful-server-administration?utm_source=github&utm_medium=repository&utm_campaign=9781788293778) [[Amazon]](https://www.amazon.com/dp/1788293770)
+* Spring Boot 2.0 Cookbook - Second Edition [[Packt]](https://www.packtpub.com/application-development/spring-boot-cookbook-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781787129825) [[Amazon]](https://www.amazon.com/dp/1787129829)
 
-* Linux Device Drivers Development [[Packt]](https://www.packtpub.com/networking-and-servers/linux-device-drivers-development?utm_source=github&utm_medium=repository&utm_campaign=9781785280009) [[Amazon]](https://www.amazon.com/dp/1788293770)
+* Mastering Spring Boot 2.0 [[Packt]](https://www.packtpub.com/application-development/mastering-spring-boot-20?utm_source=github&utm_medium=repository&utm_campaign=9781787127562) [[Amazon]](https://www.amazon.com/dp/1787127567)
 
-## Get to Know the Author(s)
-**Author Name**
-Bio
+## Get to Know the Author
+**Mohamed Shazin Sadakath**
+is an experienced software engineer with over 9 years of software development experience in J2SE-, J2EE-, and Spring-based applications. He is a BSc (Hons) software engineering graduate, having achieved first class honors. He has worked in different domains, ranging from telecommunications to real estate. In his spare time, he contributes to open source projects, such as Spring Security, and writes technical articles for blogs. He is a Stack Overflow Moderator and loves answering Java-related questions.
 
-**Author Name**
-Bio
-
-
-## Other books by the authors
-* [Mastering Linux Network Administration](https://www.packtpub.com/networking-and-servers/mastering-linux-network-administration?utm_source=github&utm_medium=repository&utm_campaign=9781784399597)
-* [Linux Mint Essentials](https://www.packtpub.com/networking-and-servers/linux-mint-essentials?utm_source=github&utm_medium=repository&utm_campaign=9781782168157)
 
 ### Suggestions and Feedback
 [Click here](https://docs.google.com/forms/d/e/1FAIpQLSdy7dATC6QmEL81FIUuymZ0Wy9vH1jHkvpY57OiMeKGqib_Ow/viewform) if you have any feedback or suggestions.
