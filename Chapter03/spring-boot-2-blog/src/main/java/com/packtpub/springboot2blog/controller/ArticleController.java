@@ -58,20 +58,20 @@ public class ArticleController {
         } else {
             model.addAttribute("articles", articleService.search(q, getPageable(page, size)));
         }
-
+        
         return "article/index";
     }
 
     @GetMapping("/show/{link}")
     public String getPost(@AuthenticationPrincipal UserDetails userDetails,
-            @PathVariable String link, Model model) {
+                          @PathVariable String link, Model model) {
         Optional<Article> article = articleService.getByLink(link);
         if (article.isPresent()) {
             model.addAttribute("article", article.get());
         } else {
             throwNotFoundException(link);
         }
-
+        
         return "article/show";
     }
 
@@ -88,12 +88,12 @@ public class ArticleController {
         } else {
             return throwNotFoundException(id);
         }
-
+        
         return "article/create";
     }
 
     private String throwNotFoundException(@PathVariable String id) {
-        throw new NotFoundException("Article Not Found for "+id);
+        throw new NotFoundException("Article Not Found for " + id);
     }
 
     @PostMapping("/delete/{id}")
@@ -101,7 +101,7 @@ public class ArticleController {
         articleService.deleteById(id);
 
         model.addAttribute("message", "Article with id " + id + " deleted successfully!");
-        model.addAttribute("articles", articleService.getAll(new PageRequest(0, 10)));
+        model.addAttribute("articles", articleService.getAll(PageRequest.of(0, 10)));
 
         return "article/index";
     }
@@ -113,13 +113,11 @@ public class ArticleController {
             article.setAuthor(user);
         } else {
             Optional<Article> optionalArticle = articleService.getById(article.getId());
-            if (optionalArticle.isPresent()) {
-                article.setAuthor(optionalArticle.get().getAuthor());
-            }
+            optionalArticle.ifPresent(value -> article.setAuthor(value.getAuthor()));
         }
         articleService.save(article);
 
-        return "redirect:/article/show/"+article.getLink();
+        return "redirect:/article/show/" + article.getLink();
     }
 
     @GetMapping("/rest")
@@ -134,7 +132,6 @@ public class ArticleController {
             return PageRequest.of(0, 20);
         }
 
-        return PageRequest.of(page, size, new Sort(Sort.Direction.DESC, "createdDate"));
+        return PageRequest.of(page, size,  Sort.by(Sort.Direction.DESC, "createdDate"));
     }
-
 }
